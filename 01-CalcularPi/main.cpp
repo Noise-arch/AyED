@@ -2,20 +2,16 @@
 #include <math.h>
 using namespace std;
 
-double aproximarPi(unsigned int iteraciones)
+double aproximarPi(int iteraciones)
 {
-    double sum = 0;
-    for (size_t i = 0; i < iteraciones; i++)
+    double sumaTotal = 0;
+    for (int i = 0; i < iteraciones; i++)
     {
-        double pi;
         double numerador = pow(-1, i);
-
         double denominador = 2 * i + 1;
-        pi = numerador / denominador;
-
-        sum = sum + pi;
+        sumaTotal += numerador / denominador;
     }
-    return sum * 4;
+    return sumaTotal * 4;
 }
 
 int main()
