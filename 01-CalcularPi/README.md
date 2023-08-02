@@ -1,8 +1,7 @@
 # 01-CalcularPi
 
-Le aplicamos a `cout` una precision decimal de 7.
+Primero definimos las variables `sum` (sumatoria de la serie de Leibniz), `piDeseado` el valor de pi que queremos, `i` la cantidad de iteraciones que hace el while loop.
 
-Dentro del `cout` llamamos a la funcion `aproximarPi` a la que se le pasa la cantidad de iteraciones que uno desea.
-Luego se llama a un ciclo `for` que itera la cantidad de veces que se le pide a la funcion `aproximarPi`. El codigo dentro del ciclo representaria cada termino de la serie de Leibniz para al final de cada iteracion sumarlo a `sumaTotal`.
+Definimos la precision a 7 digitos con `cout.precision(7)`.
 
-Finalmente luego de ejecutar el ciclo `for` la cantidad de veces solicitadas, la funcion retorna el valor de la `sumaTotal` multiplicado por 4.
+En el loop ponemos la condicion de que la diferencia entre la sumatoria de Leibniz y el valor que deseamos de pi sea menor o igual a 0.0000001, ponemos tambien la condicion para los negativos ya que existe la posibilidad de que la serie de Leibniz devuelva un valor negativo y al restarle el pi deseado quede una diferencia negativa.
